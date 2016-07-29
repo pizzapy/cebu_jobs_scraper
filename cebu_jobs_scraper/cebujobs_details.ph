@@ -14,7 +14,7 @@ def scrape_teaser(soup):
 
 def scrape_details(url):
     response = requests.get(url, headers={"User-Agent": "Mozilla-Firefox"})
-    soup = BeautifulSoup(response.text)
+    soup = BeautifulSoup(response.text, 'html.parser')
     return {
         "posted_date": scrape_posted_date(soup),
         "teaser": scrape_teaser(soup),
