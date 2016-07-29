@@ -3,13 +3,19 @@ import sys
 
 from bs4 import BeautifulSoup
 
+from scrapingtools import scrape_safely
 
+
+@scrape_safely
 def scrape_posted_date(soup):
-    return soup.select("html body div#main-content div.header p.left")[0].text
+    result = soup.select("html body div#main-content div.header p.left")
+    return result[0].text if result else None
 
 
+@scrape_safely
 def scrape_teaser(soup):
-    return soup.select("html body div#main-content div.main-description")[0].text[:300]
+    result = soup.select("html body div#main-content div.main-description")
+    return result[0].text[:300] if result else None
 
 
 def scrape_details(url):
