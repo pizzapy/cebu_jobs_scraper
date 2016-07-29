@@ -4,7 +4,7 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 
-from .scrapingtools import scrape_safely
+from scrapingtools import scrape_safely
 
 
 @scrape_safely
