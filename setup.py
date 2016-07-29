@@ -23,9 +23,9 @@ setup(
     version='0.0.1',
     description="CLI for scraping Cebu jobs sites.",
     long_description=readme + '\n\n' + history,
-    author="D. Yu",
+    author="PizzaPy",
     author_email='dyu@fastmail.com',
-    url='https://github.com/darylyu/cebu_jobs_scraper',
+    url='https://github.com/pizzapy/cebu_jobs_scraper',
     packages=[
         'cebu_jobs_scraper',
     ],
